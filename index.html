@@ -1,20 +1,622 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gokul M - B.Sc Computer Science Student | Aspiring Software Engineer | Full Stack Developer | AI & ML Enthusiast. Portfolio showcasing WORKLX, ArogyaSathi AI, Smart Helmet 2.0, and skills." />
-    <meta name="keywords" content="Gokul M, Portfolio, Software Engineer, B.Sc Computer Science, Full Stack Developer, React, Node.js, AI, Machine Learning, ArogyaSathi AI, WORKLX" />
-    <meta name="author" content="Gokul M" />
-    <!-- Google Fonts Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>Gokul M | Aspiring Software Engineer & Full Stack Developer</title>
-  </head>
-  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Gokul M | Portfolio | B.Sc Computer Science Student</title>
+  <meta name="title" content="Gokul M | Portfolio | B.Sc Computer Science Student">
+  <meta name="description" content="Personal portfolio of Gokul M, B.Sc Computer Science student at VETIAS College. Aspiring Software Engineer, Full Stack Developer, and AI & ML Enthusiast.">
+  <meta name="author" content="Gokul M">
+  <link rel="canonical" href="https://gokulrm2007-cpu.github.io/protfoli/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gokulrm2007-cpu.github.io/protfoli/">
+  <meta property="og:title" content="Gokul M | Portfolio | B.Sc Computer Science Student">
+  <meta property="og:description" content="Personal portfolio of Gokul M - B.Sc Computer Science student at VETIAS College. Full-stack development, AI/ML projects, and software engineering.">
+  <meta property="og:image" content="https://gokulrm2007-cpu.github.io/protfoli/profile.webp">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gokulrm2007-cpu.github.io/protfoli/">
+  <meta name="twitter:title" content="Gokul M | Portfolio | B.Sc Computer Science Student">
+  <meta name="twitter:description" content="Personal portfolio of Gokul M - B.Sc Computer Science student at VETIAS College. Full-stack development, AI/ML projects, and software engineering.">
+  <meta name="twitter:image" content="https://gokulrm2007-cpu.github.io/protfoli/profile.webp">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Gokul M Home">
+        <span class="brand-badge">G</span>
+        <span>Gokul M</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Available for Opportunities</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Gokul M</span>
+          </h1>
+
+          <p class="hero-headline">
+            B.Sc Computer Science Student | Aspiring Software Engineer | Full Stack Developer | AI &amp; ML Enthusiast
+          </p>
+
+          <p class="hero-description">
+            Building ideas into software, and exploring what AI can make possible. Focused on core computer science foundations, responsive full-stack web applications, and intelligent systems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#" class="btn btn-secondary" id="heroResumeBtn">Resume (Pending)</a>
+            <a href="tel:6379964841" class="btn btn-outline" data-link="phone" aria-label="Call Gokul">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call</span>
+            </a>
+            <a href="mailto:gokulrm2007@gmail.com" class="btn btn-outline" data-link="email" aria-label="Email Gokul">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/gokul-m-57817635a/" target="_blank" rel="noopener noreferrer" class="btn-icon" data-link="linkedin" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.22c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74Z"/></svg>
+            </a>
+            <a href="https://github.com/gokulrm2007-cpu" target="_blank" rel="noopener noreferrer" class="btn-icon" data-link="github" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card-wrapper">
+          <div class="hero-profile-card">
+            <div class="profile-avatar-container">
+              <img src="profile.webp" alt="Gokul M" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="profile-initials" style="display:none;">GM</span>
+            </div>
+            <h2 class="profile-name">Gokul M</h2>
+            <p class="profile-role">B.Sc Computer Science</p>
+            <p class="profile-college">VETIAS College</p>
+            
+            <div class="profile-meta-list">
+              <div class="profile-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <span>Status: [Current Semester]</span>
+              </div>
+              <div class="profile-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Location: India</span>
+              </div>
+              <div class="profile-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span>Domain: Full Stack &amp; Applied AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         About Section
+         ========================================================================= -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Academic foundations, core focus areas, and development philosophy.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Who I Am</span>
+            </h3>
+            <p>
+              I am a B.Sc Computer Science student at VETIAS College passionate about software engineering, full-stack web applications, Artificial Intelligence, and Machine Learning.
+            </p>
+            <p>
+              My goal is to translate core algorithmic and computer science concepts into scalable software solutions. I enjoy building functional applications that solve real user problems with clean architecture and modern development standards.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Academic &amp; Contact Overview</span>
+            </h3>
+            <div class="about-details-list">
+              <div class="about-detail-row">
+                <span class="about-detail-label">Degree:</span>
+                <span class="about-detail-val">B.Sc Computer Science</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Institution:</span>
+                <span class="about-detail-val">VETIAS College</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Semester:</span>
+                <span class="about-detail-val">[Current Semester]</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Email:</span>
+                <span class="about-detail-val"><a href="mailto:gokulrm2007@gmail.com" data-link="email">gokulrm2007@gmail.com</a></span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Phone:</span>
+                <span class="about-detail-val"><a href="tel:6379964841" data-link="phone">6379964841</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Skills Section
+         ========================================================================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Capabilities</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Verified technologies, programming languages, tools, and technical competencies.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Programming Languages</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">C</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Frontend Development -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Frontend Development</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">React.js</span>
+              <span class="skill-badge">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Backend Development</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express.js</span>
+              <span class="skill-badge">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Databases</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">Mongoose</span>
+            </div>
+          </div>
+
+          <!-- AI & Machine Learning -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-4.54z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-4.54z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">AI &amp; Machine Learning</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">Artificial Intelligence</span>
+              <span class="skill-badge">Machine Learning</span>
+              <span class="skill-badge">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <!-- Tools & Engineering -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3 class="skill-cat-title">Tools &amp; Engineering</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">HackerRank</span>
+              <span class="skill-badge">Hardware &amp; Networking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Projects Section
+         ========================================================================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications, engineering solutions, and IoT systems.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: WORKLX -->
+          <div class="project-card">
+            <div class="project-badge-row">
+              <span class="project-type-tag">Full-Stack Marketplace</span>
+            </div>
+            <h3 class="project-title">WORKLX - Worker Hiring &amp; Service Marketplace</h3>
+            <p class="project-desc">
+              A full-stack worker hiring and service marketplace that connects customers with verified skilled workers including electricians, plumbers, painters, carpenters, and technicians.
+            </p>
+            <div class="project-feature-list">
+              <div class="project-feature-item">Dual-role architecture (worker &amp; customer portals)</div>
+              <div class="project-feature-item">Skill-based search, location filtering, and ratings</div>
+              <div class="project-feature-item">Integrated Razorpay payments and Socket.io chat</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React.js</span>
+              <span class="project-tech-pill">Node.js</span>
+              <span class="project-tech-pill">Express.js</span>
+              <span class="project-tech-pill">MongoDB</span>
+              <span class="project-tech-pill">Socket.io</span>
+              <span class="project-tech-pill">Razorpay</span>
+            </div>
+            <div class="project-links-row">
+              <span class="placeholder-note">Repository / Live Demo: Pending link</span>
+            </div>
+          </div>
+
+          <!-- Project 2: ArogyaSathi AI -->
+          <div class="project-card">
+            <div class="project-badge-row">
+              <span class="project-type-tag">AI Healthcare</span>
+            </div>
+            <h3 class="project-title">ArogyaSathi AI - Smart Patient Intake Assistant</h3>
+            <p class="project-desc">
+              A multilingual hospital pre-consultation platform designed to simplify patient intake and assist doctors in reviewing structured clinical summaries prior to consultation.
+            </p>
+            <div class="project-feature-list">
+              <div class="project-feature-item">Multilingual intake across 8 Indian languages</div>
+              <div class="project-feature-item">Speech-to-text via Web Speech API &amp; OCR document scanning</div>
+              <div class="project-feature-item">Automated clinical risk stratification and doctor dashboard</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React.js</span>
+              <span class="project-tech-pill">Node.js</span>
+              <span class="project-tech-pill">Web Speech API</span>
+              <span class="project-tech-pill">OCR</span>
+              <span class="project-tech-pill">AI Triage</span>
+            </div>
+            <div class="project-links-row">
+              <span class="placeholder-note">Repository / Live Demo: Pending link</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Smart Helmet 2.0 -->
+          <div class="project-card">
+            <div class="project-badge-row">
+              <span class="project-type-tag">IoT Safety System</span>
+            </div>
+            <h3 class="project-title">Smart Helmet 2.0 - Two-Wheeler Safety System</h3>
+            <p class="project-desc">
+              An embedded IoT safety platform designed to prevent accidents by enforcing helmet wearing and screening for alcohol before enabling the vehicle engine relay.
+            </p>
+            <div class="project-feature-list">
+              <div class="project-feature-item">Dual sensor checks for helmet buckle &amp; alcohol presence</div>
+              <div class="project-feature-item">Hardware interlock relay with engine ignition</div>
+              <div class="project-feature-item">Emergency impact detection and alert workflow</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">ESP32</span>
+              <span class="project-tech-pill">Arduino</span>
+              <span class="project-tech-pill">Embedded C/C++</span>
+              <span class="project-tech-pill">Sensors</span>
+            </div>
+            <div class="project-links-row">
+              <span class="placeholder-note">Project Details: Pending link</span>
+            </div>
+          </div>
+
+          <!-- Project 4: SIH 2026 Innovation -->
+          <div class="project-card">
+            <div class="project-badge-row">
+              <span class="project-type-tag">Hackathon Innovation</span>
+            </div>
+            <h3 class="project-title">National Digital Land Governance Platform</h3>
+            <p class="project-desc">
+              Smart India Hackathon (SIH 2026) innovation project focused on building a digital platform for research, policy innovation, and evidence-based land governance.
+            </p>
+            <div class="project-feature-list">
+              <div class="project-feature-item">Data-driven land records analysis &amp; policy insight tools</div>
+              <div class="project-feature-item">Secure verification workflows for municipal authorities</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">Full Stack</span>
+              <span class="project-tech-pill">Analytics</span>
+              <span class="project-tech-pill">Policy Tech</span>
+            </div>
+            <div class="project-links-row">
+              <span class="placeholder-note">Project Submission: Pending link</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Education & Certifications Section
+         ========================================================================= -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Academics &amp; Learning</span>
+          <h2 class="section-title">Education &amp; Training</h2>
+          <p class="section-subtitle">Formal degree studies, technical coursework, and certified training.</p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Education Card -->
+          <div class="timeline-card">
+            <h3 class="card-heading">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>Education</span>
+            </h3>
+
+            <div class="edu-item">
+              <h4 class="edu-degree">B.Sc Computer Science</h4>
+              <p class="edu-institution">VETIAS College</p>
+              <p class="edu-meta">Status: [Current Semester]</p>
+              
+              <div class="coursework-title">Key Coursework:</div>
+              <div class="coursework-tags">
+                <span class="tag-badge">Data Structures &amp; Algorithms</span>
+                <span class="tag-badge">Object-Oriented Programming (Java &amp; Python)</span>
+                <span class="tag-badge">Database Management Systems</span>
+                <span class="tag-badge">Computer Networks</span>
+                <span class="tag-badge">Operating Systems</span>
+                <span class="tag-badge">Web Application Development</span>
+                <span class="tag-badge">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Workshops Card -->
+          <div class="timeline-card">
+            <h3 class="card-heading">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              <span>Certifications &amp; Workshops</span>
+            </h3>
+
+            <div class="cert-list">
+              <div class="cert-item">
+                <div class="cert-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h4 class="cert-name">Hardware &amp; Networking</h4>
+                  <p class="cert-desc">Certified training in computer architecture, hardware components, and network configuration.</p>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h4 class="cert-name">Python Workshop</h4>
+                  <p class="cert-desc">Two-day hands-on technical workshop on Python programming and practical implementations.</p>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h4 class="cert-name">MSME Course</h4>
+                  <p class="cert-desc">Technical skill enhancement and vocational development curriculum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section
+         ========================================================================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Get in Touch</span>
+          <h2 class="section-title">Contact Gokul</h2>
+          <p class="section-subtitle">Feel free to reach out for collaboration, project opportunities, or technical inquiries.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Cards -->
+          <div class="contact-info-cards">
+            <a href="tel:6379964841" class="contact-card" data-link="phone">
+              <div class="contact-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Direct Phone / Call</div>
+                <div class="contact-card-val">+91 6379964841</div>
+              </div>
+            </a>
+
+            <a href="mailto:gokulrm2007@gmail.com" class="contact-card" data-link="email">
+              <div class="contact-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Email Address</div>
+                <div class="contact-card-val">gokulrm2007@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/gokul-m-57817635a/" target="_blank" rel="noopener noreferrer" class="contact-card" data-link="linkedin">
+              <div class="contact-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.22c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74Z"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">LinkedIn Profile</div>
+                <div class="contact-card-val">linkedin.com/in/gokul-m-57817635a</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/gokulrm2007-cpu" target="_blank" rel="noopener noreferrer" class="contact-card" data-link="github">
+              <div class="contact-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">GitHub Profile</div>
+                <div class="contact-card-val">github.com/gokulrm2007-cpu</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form Container -->
+          <div class="contact-form-container">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="formName" class="form-label">Your Name</label>
+                <input type="text" id="formName" class="form-input" placeholder="e.g. Alex Johnson" required>
+              </div>
+              <div class="form-group">
+                <label for="formEmail" class="form-label">Your Email</label>
+                <input type="email" id="formEmail" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="formMessage" class="form-label">Message</label>
+                <textarea id="formMessage" class="form-textarea" placeholder="Hello Gokul, I'd like to discuss a project..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+              <div id="formStatus" style="margin-top: 0.75rem; font-size: 0.875rem; font-weight: 500;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">Gokul M</div>
+        <nav>
+          <div class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/gokul-m-57817635a/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" data-link="linkedin" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.22c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74Z"/></svg>
+          </a>
+          <a href="https://github.com/gokulrm2007-cpu" target="_blank" rel="noopener noreferrer" class="footer-social-btn" data-link="github" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Gokul M. All rights reserved.</div>
+        <div>B.Sc Computer Science &bull; VETIAS College</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
 </html>
