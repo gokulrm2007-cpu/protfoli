@@ -219,18 +219,23 @@ export default function Hero({ onOpenResume, onOpenAI }) {
           <div className="lg:col-span-5 flex items-center justify-center relative">
             <div className="relative w-full max-w-sm sm:max-w-md mx-auto">
               
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/25 via-indigo-500/20 to-cyan-400/25 rounded-3xl blur-2xl -z-10 transform scale-105"></div>
+              {/* Background Multi-Layer Ambient Glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-indigo-600/25 to-cyan-400/30 rounded-3xl blur-3xl -z-10 transform scale-110 animate-pulse"></div>
 
-              <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-3xl p-6 sm:p-7 border border-white/80 dark:border-slate-800 shadow-2xl relative group">
+              <div className="bg-white/95 dark:bg-slate-900/90 backdrop-blur-2xl rounded-3xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 shadow-2xl relative group">
                 
-                <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-gradient-to-b from-slate-50 to-blue-50/60 dark:from-slate-800 dark:to-slate-900 border border-blue-500/20 shadow-inner flex flex-col items-center justify-center">
+                {/* Photo Frame Container */}
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-b from-blue-50/80 to-slate-100 dark:from-slate-800 dark:to-slate-900/90 border border-blue-500/25 shadow-inner flex flex-col items-center justify-center p-2">
                   {personalInfo.useCustomPhoto && personalInfo.photoUrl && !photoError ? (
-                    <img
-                      src={personalInfo.photoUrl}
-                      alt={personalInfo.name}
-                      onError={() => setPhotoError(true)}
-                      className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <div className="relative w-full h-full rounded-2xl overflow-hidden group">
+                      <img
+                        src={personalInfo.photoUrl}
+                        alt={personalInfo.name}
+                        onError={() => setPhotoError(true)}
+                        className="w-full h-full object-cover object-top rounded-2xl transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                    </div>
                   ) : (
                     <div className="text-center p-6 flex flex-col items-center justify-center h-full">
                       <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center text-white text-3xl sm:text-4xl font-extrabold shadow-lg shadow-blue-500/30 mb-4 ring-4 ring-blue-100 dark:ring-blue-900/50 group-hover:scale-105 transition-transform">
@@ -247,29 +252,30 @@ export default function Hero({ onOpenResume, onOpenAI }) {
                         <Camera className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         <span>Add Your Profile Photo</span>
                       </div>
-                      <span className="text-[10px] text-slate-400 dark:text-slate-500 mt-1.5">
-                        Drop image into <code className="text-slate-600 dark:text-slate-300 font-mono">src/assets/profile.jpg</code>
-                      </span>
                     </div>
                   )}
 
-                  <div className="absolute bottom-3 left-3 right-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-between">
+                  {/* Overlaid Verified Student Badge */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-slate-200/80 dark:border-slate-700 shadow-md flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span className="text-xs font-bold text-slate-800 dark:text-slate-200">Student & Builder</span>
+                      <span className="text-xs font-bold text-slate-800 dark:text-slate-200">{personalInfo.name}</span>
                     </div>
                     <span className="text-[11px] text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-950/50 px-2 py-0.5 rounded-md border border-blue-100 dark:border-blue-900">
-                      VETIAS
+                      {personalInfo.college}
                     </span>
                   </div>
                 </div>
 
+                {/* Bottom Card Summary */}
                 <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center gap-1.5">
+                  <span className="flex items-center gap-1.5 font-medium">
                     <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                    <span>Passionate about Full Stack & AI</span>
+                    <span>Full Stack &amp; AI Engineer</span>
                   </span>
-                  <span className="text-blue-600 dark:text-blue-400 font-bold font-mono">2026</span>
+                  <span className="text-blue-600 dark:text-blue-400 font-bold font-mono px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-800">
+                    2026 Build
+                  </span>
                 </div>
               </div>
 

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==============================================================================
  * CENTRAL PORTFOLIO CONFIGURATION & AI KNOWLEDGE BASE - GOKUL M
  * ==============================================================================
@@ -23,8 +23,8 @@ export const personalInfo = {
   linkedinUrl: "https://www.linkedin.com/in/gokul-m-57817635a",
   
   // Profile photo configuration:
-  photoUrl: null, // e.g. "/src/assets/profile.jpg"
-  useCustomPhoto: false,
+  photoUrl: "/profile.jpg",
+  useCustomPhoto: true,
 
   // Resume details
   resumeAvailable: true,
